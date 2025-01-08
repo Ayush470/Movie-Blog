@@ -1,0 +1,588 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  display: grid; /* Body as a grid container with six rows*/
+  grid-template-rows: 75px auto auto auto auto auto; /* Defining six rows with nav size fixed and other rows to size dynamically based on content */
+  grid-template-areas:
+    "nav"
+    "header"
+    "blogs"
+    "about"
+    "contact"
+    "footer";
+}
+
+/* Navigation section styling  */
+nav {
+  position: fixed; /* Setting position fixed so that it always remain at top */
+  top: 0;
+  width: 100%;
+  height: 75px;
+  grid-area: nav;
+  background-color: #333;
+  display: flex; /* Two flex-items i.e.. h1 and a div for navbar content */
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1; /* Nav section always remain visible over top of other sections */
+  transition: background-color 1s;
+}
+
+nav h1 {
+  font-size: 30px;
+  font-family: Copperplate, Papyrus, "Lucida Handwriting", cursive;
+  color: white;
+  padding-left: 20px;
+}
+
+.toggle {
+  /* For dextop size nav content will always be visible  */
+  display: none;
+}
+
+.toggle-options {
+  /* For dextop size nav content will always be visible  */
+  display: none;
+}
+
+.nav-items a {
+  font-size: 20px;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 7%;
+  transition: background-color 1s;
+  font-family: "Playfair Display", serif;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+#btnControl {
+  /* Behind the scene checkbox hack is used for smaller screen sizes i.e.. tablet and mobile screen */
+  display: none;
+}
+
+.left_arrowIcon {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid white;
+  display: inline-block;
+  transition-duration: 1s;
+  transition-property: transform;
+}
+
+.dropdown:hover label .left_arrowIcon {
+  transform: rotate(-90deg);
+}
+
+.btnControlLabel {
+  font-size: 20px;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  border: 0px;
+  border-radius: 7%;
+  transition: background-color 1s;
+}
+
+.nav-items a:hover,
+.dropdown:hover .btnControlLabel {
+  background-color: #555;
+}
+
+/* Intially, display property of dropdown content is set to none but when dropdown div is hovered the display property is set to block. */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ccc;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 0%;
+}
+
+/* Header section styling */
+header {
+  grid-area: header;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url("./assets/img1.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fffff0;
+  scroll-margin-top: 75px; /* Adjusts scroll position for fixed navbar. */
+}
+
+header div {
+  height: 550px;
+  width: 450px;
+  position: relative;
+  left: 10%;
+  top: 5%;
+  transition: transform 1s ease-in-out;
+}
+
+header div h1 {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 1s;
+  font-family: "Playfair Display", serif;
+}
+
+header div p {
+  text-align: justify;
+  font-size: large;
+  font-family: "Lora", serif;
+}
+
+header:hover #header-content {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+header:hover #header-content-heading {
+  text-decoration-color: white;
+}
+
+/* Main section styling */
+main {
+  grid-area: blogs;
+  background-color: black;
+  color: white;
+  padding-bottom: 30px;
+}
+
+main h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+main div {
+  /* This div is a flex container which contains blogs as a flex-items */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.blog {
+  width: 35%;
+  padding: 10px;
+  background-color: #1e1e1e;
+  margin: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+.blog h3 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.blog h4 {
+  font-family: "Playfair Display", serif;
+}
+
+.movie {
+  scroll-margin-top: 75px;
+}
+
+.blog p {
+  text-align: justify;
+  font-family: "Lora", serif;
+}
+
+.blogImg {
+  text-align: center;
+}
+
+.blogVid {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto; /* Centers the element horizontally. */
+}
+
+.blogVid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Width-to-height ratio */
+}
+
+/* About section styling */
+#about {
+  grid-area: about;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("./assets/img2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  scroll-margin-top: 75px;
+  display: flex; /* Whole about section is a flex container with one div content */
+  justify-content: end; /* A single div which is positioned at the end(rightmost) of the container */
+}
+
+#about div {
+  height: 580px;
+  width: 450px;
+  padding-top: 20px;
+  padding-right: 100px;
+  color: #d3d3d3;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+#about:hover #aboutContent {
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+#about div h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+#about div p {
+  text-align: justify;
+  font-family: "Lora", serif;
+}
+
+/* Contact section styling */
+#contact {
+  grid-area: contact;
+  background-color: rgb(0, 0, 0);
+  height: 600px;
+  display: flex; /* Contact section is also a flex container */
+  column-gap: 20%;
+  scroll-margin-top: 75px;
+}
+
+/* First flex item of the contact section flex container */
+#contact-content {
+  width: 35%;
+  height: 500px;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255);
+  padding: 15px;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+#contact-content-heading {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#main {
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+#sub {
+  text-align: left;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+label {
+  font-size: larger;
+  display: inline-block;
+  padding: 5px;
+  font-family: "Lora", serif;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1.5px solid #000;
+}
+
+.inputType1 {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#message {
+  border-radius: 5px;
+  border: 1.5px solid #000;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#submit {
+  font-size: larger;
+  background-color: #ff6b00;
+  font-family: "Lora", serif;
+  transition: background-color 1s;
+}
+
+#submit:hover {
+  background-color: #ff2f00;
+}
+
+#contact-image {
+  width: 35%;
+  padding-top: 60px;
+  padding-right: 25px;
+}
+
+/* Footer section styling */
+footer {
+  grid-area: footer;
+  background-color: #333;
+}
+
+footer section {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.icons {
+  margin: 15px 10px 5px;
+  padding: 20px;
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-envelope {
+  background-color: #c71610;
+  color: white;
+}
+
+footer p {
+  color: whitesmoke;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+/* Styles for screens with a maximum width of 768px (e.g., tablets and smaller devices) */
+@media only screen and (max-width: 768px) {
+  /* Styling the nav section for toggle functionality */
+  .toggle {
+    display: none;
+  }
+
+  .toggle-options {
+    display: inline;
+  }
+
+  .fas {
+    font-size: xx-large;
+    color: white;
+  }
+
+  .fa-times {
+    display: none;
+  }
+
+  #icons:checked + .toggle-options .fa-bars {
+    display: none;
+  }
+
+  #icons:checked + .toggle-options .fa-times {
+    display: inline;
+  }
+
+  .nav-items {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    background-color: #444;
+  }
+
+  .nav-items a {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 0%;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  .btnControlLabel {
+    display: block;
+    width: 100%;
+    border-radius: 0%;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: static;
+    min-width: 0;
+  }
+
+  #icons:checked ~ .nav-items {
+    display: block;
+  }
+
+  #btnControl:hover + .btnControlLabel > .left_arrowIcon {
+    /* For desktop sizes: hover was used to trigger changes. */
+    transform: rotate(0deg);
+  }
+
+  #btnControl:checked + .btnControlLabel > .left_arrowIcon {
+    /* For screens with max-width 768px: checkbox is used to trigger the same changes. */
+    transform: rotate(-90deg);
+  }
+
+  .dropdown:hover .dropdown-content {
+    /* For desktop sizes: hover was used to trigger changes. */
+    display: none;
+  }
+
+  #btnControl:checked ~ .dropdown-content {
+    /* For screens with max-width 768px: checkbox is used to trigger the same changes. */
+    display: block;
+  }
+
+  header {
+    background-image: linear-gradient(
+        /* New background image is used in header section for screens with max-width 768px */
+          rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      url("./assets/img1edit.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header div {
+    position: static;
+    height: 550px;
+    padding-top: 30px;
+  }
+
+  .blog {
+    width: 100%;
+    margin: 30px 35px;
+  }
+
+  .blogImg {
+    float: left;
+  }
+
+  #about {
+    background-image: linear-gradient(
+        /* New background image is used in about section for screens with max-width 768px */
+          rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      url("./assets/img4.avif");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #about div {
+    position: static;
+    height: 550px;
+    padding: 25px 0px;
+  }
+
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact-content {
+    position: static;
+    width: 50%;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  #contact-image {
+    /* Contact section image is removed from the document for screens with max-width 768px */
+    display: none;
+  }
+
+  footer section {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header div {
+    width: 330px;
+    margin-bottom: 30px;
+  }
+
+  header div p {
+    font-size: medium;
+  }
+
+  .blogImg {
+    float: none;
+  }
+
+  #about div {
+    width: 350px;
+    height: 650px;
+    padding: 0px 15px;
+  }
+
+  #contact-content {
+    width: 70%;
+    border-radius: 3%;
+  }
+
+  #main {
+    font-size: 30px;
+  }
+
+  #sub {
+    font-size: 15px;
+  }
+}

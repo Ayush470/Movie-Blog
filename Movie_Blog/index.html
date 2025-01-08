@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite Movies</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="author" content="Ayush Prajapati" />
+    <meta
+      name="keywords"
+      content="Movie, Favorite, Cinema, Best, Picture, Must, Watch, Film, Art, Motion Picture, Feature Film, Feature, Silver Screen "
+    />
+    <meta name="description" content="My Favorite movies" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!--  Navigation section of the blog -->
+      <h1>Movie Blog!!!</h1>
+      <div class="navbar-content">
+        <input type="checkbox" id="icons" class="toggle" />
+        <label for="icons" class="toggle-options">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </label>
+        <div class="nav-items">
+          <a href="#header">Home</a>
+          <div class="dropdown">
+            <input type="checkbox" id="btnControl" />
+            <label for="btnControl" class="btnControlLabel"
+              >Blogs <span class="left_arrowIcon"></span>
+            </label>
+            <div class="dropdown-content">
+              <a href="#movie1">3 Idiots</a>
+              <a href="#movie2">Lagaan: Once Upon a Time in India</a>
+              <a href="#movie3">Schindler's List</a>
+              <a href="#movie4">The Silence of the Lambs</a>
+              <a href="#movie5">Titanic</a>
+            </div>
+          </div>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <header id="header">
+      <!-- Header section of the blog  -->
+      <div id="header-content">
+        <h1 id="header-content-heading">My Favorite Movies</h1>
+        <p id="header-content-paragraph">
+          Welcome to <b>My Favorite Movies</b> Blog! I'm Ayush, an aspiring full
+          stack developer with a deep love for films. When I’m not coding or
+          exploring the intricacies of web development, I immerse myself in the
+          world of cinema. This blog is my space to share movies that have left
+          a lasting impression on me, whether they’re timeless classics, hidden
+          gems, or recent blockbusters. The purpose of this blog is simple: to
+          highlight the films I believe are must-watches or belong to my
+          personal "perfect movies" list. From gripping dramas to thrilling
+          action, I’ll cover a variety of genres, always focusing on stories
+          that resonate with me.<br />
+          While movies may seem like an escape from my development journey, they
+          often inspire my creativity and problem-solving skills. So, grab some
+          popcorn, and join me as I explore the cinematic universe, one great
+          film at a time!
+        </p>
+      </div>
+    </header>
+    <main>
+      <!--  Main section which include blogs and their details -->
+      <h2>Must-Watch Films: The Ultimate Movie Bucket List</h2>
+      <div>
+        <!--  First blog -->
+        <article class="blog" id="blog1">
+          <h3>Blog 1</h3>
+          <h4 class="movie" id="movie1">3 Idiots</h4>
+          <p>
+            An inspiring and heartwarming tale about friendship, following your
+            passion, and challenging societal norms surrounding education and
+            success.
+          </p>
+          <figure class="blogImg">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/d/df/3_idiots_poster.jpg"
+              alt="3 Idiots Movie theatrical Release Poster"
+              height="auto"
+              width="70%"
+            />
+            <figcaption>
+              Theatrical Release poster (Credit: Wikipedia)
+            </figcaption>
+          </figure>
+          <p>
+            It follows the lives of three engineering students—Rancho, Farhan,
+            and Raju—navigating a rigid, pressure-filled education system.
+            Rancho, played by Aamir Khan, stands out as a free spirit who
+            challenges conventional learning, inspiring his friends to follow
+            their passions instead of societal expectations. The film alternates
+            between their college years and a present-day search for Rancho, who
+            disappeared after graduation. Through humor and heart, 3 Idiots
+            critiques the academic pressure students face and explores themes of
+            friendship, mental health, and the importance of pursuing personal
+            fulfillment over societal definitions of success.<br />
+            With its mix of comedy and deep emotional moments, the film delivers
+            a timeless message: follow your passion, think outside the box, and
+            value learning over rote memorization.
+          </p>
+          <figure class="blogVid">
+            <iframe
+              src="https://www.youtube.com/embed/zIKu9k50SDo?list=PLD2E811E8C4044FB4"
+              title="3 Idiots |3 इडियट्स  |Official Trailer HD |Aamir Khan | Boman Irani | Sharman Joshi | Kareena Kapoor"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+            <figcaption>
+              3 Idiots Movie Trailer (Credit: Vidhu Vinod Chopra Films Youtube
+              Channel)
+            </figcaption>
+          </figure>
+        </article>
+        <article class="blog" id="blog2">
+          <!-- Second blog -->
+          <h3>Blog 2</h3>
+          <h4 class="movie" id="movie2">Lagaan: Once Upon a Time in India</h4>
+          <p>
+            A gripping tale of an oppressed village's fight for survival, where
+            a cricket match against British rulers becomes a symbol of hope and
+            defiance.
+          </p>
+          <figure class="blogImg">
+            <img
+              src="https://bollywoodmovieposters.com/wp-content/uploads/2021/02/lagaan-team-poster-aamir-khan.jpg"
+              alt="Lagaan Movie theatrical Release Poster"
+              height="auto"
+              width="70%"
+            />
+            <figcaption id="blog2ImgCaption">
+              Theatrical Release poster (Credit: Bollywood Movie Posters)
+            </figcaption>
+          </figure>
+          <p>
+            Lagaan is set in late 19th-century colonial India, where a small
+            village faces crippling taxes (lagaan) imposed by British rulers.
+            When the villagers plead for relief, the arrogant British officer,
+            Captain Russell, challenges them to a cricket match—an unfamiliar
+            sport to the locals. If they win, their taxes will be canceled for
+            three years, but if they lose, the burden will be tripled. Led by
+            the spirited and courageous Bhuvan, the villagers, despite their
+            lack of knowledge of the game, form a team and train
+            relentlessly.<br />
+            Overcoming personal differences, cultural barriers, and limited
+            resources, they prepare for a showdown that will determine their
+            future. Lagaan is a powerful story of resilience, unity, and the
+            indomitable spirit of ordinary people rising against colonial
+            oppression. The film combines drama, sportsmanship, and patriotism,
+            culminating in a thrilling, emotionally charged final match that
+            echoes the villagers’ fight for dignity and survival.
+          </p>
+          <figure class="blogVid">
+            <iframe
+              src="https://www.youtube.com/embed/rZPbpymefuE"
+              title="🎥 LAGAAN: ONCE UPON A TIME IN INDIA (2001) | Movie Trailer | Full HD | 1080p"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+            <figcaption>
+              Lagaan Movie Trailer (Credit: Movie Predictor Youtube Channel)
+            </figcaption>
+          </figure>
+        </article>
+        <article class="blog" id="blog3">
+          <!-- Third blog -->
+          <h3>Blog 3</h3>
+          <h4 class="movie" id="movie3">Schindler's List</h4>
+          <p>
+            A hauntingly powerful portrayal of one man's transformation from
+            opportunistic businessman to humanitarian, as he risks everything to
+            save over a thousand Jews during the Holocaust.
+          </p>
+          <figure class="blogImg">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg"
+              alt="Schindler's List Movie theatrical Release Poster"
+              height="auto"
+              width="70%"
+            />
+            <figcaption>
+              Theatrical Release poster (Credit: Wikipedia)
+            </figcaption>
+          </figure>
+          <p>
+            Schindler's List is a deeply moving historical drama set during
+            World War II, following the true story of Oskar Schindler, a German
+            businessman who profits from the war by employing Jewish workers in
+            his factories. Initially driven by personal gain, Schindler
+            gradually becomes aware of the horrors of the Holocaust and the fate
+            of the Jewish community under Nazi rule. As the atrocities
+            intensify, Schindler’s moral compass shifts, leading him to make
+            life-altering decisions that impact the lives of those around
+            him.<br />
+            The film paints a harrowing picture of the brutality and inhumanity
+            of the Holocaust while highlighting themes of courage, sacrifice,
+            and redemption. Directed by Steven Spielberg, Schindler's List is a
+            poignant exploration of the human capacity for good in the face of
+            overwhelming evil, offering a powerful tribute to the resilience and
+            spirit of those who suffered during one of history's darkest
+            periods.
+          </p>
+          <figure class="blogVid">
+            <iframe
+              src="https://www.youtube.com/embed/mxphAlJID9U"
+              title="Schindler&#39;s List 25th Anniversary - Official Trailer - In Theaters December 7"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+            <figcaption>
+              Schindler's List Movie Trailer (Credit: Universal Pictures Youtube
+              Channel)
+            </figcaption>
+          </figure>
+        </article>
+        <article class="blog" id="blog4">
+          <!-- Fourth blog -->
+          <h3>Blog 4</h3>
+          <h4 class="movie" id="movie4">The Silence of the Lambs</h4>
+          <p>
+            A riveting psychological thriller that follows an FBI trainee's
+            chilling pursuit of a serial killer, with the help of an imprisoned,
+            manipulative cannibalistic psychiatrist.
+          </p>
+          <figure class="blogImg">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg"
+              alt="The Silence of the Lambs Movie theatrical Release Poster"
+              height="auto"
+              width="70%"
+            />
+            <figcaption>
+              Theatrical Release poster (Credit: Wikipedia)
+            </figcaption>
+          </figure>
+          <p>
+            The Silence of the Lambs is a chilling psychological thriller that
+            follows Clarice Starling, a young FBI trainee tasked with
+            interviewing Dr. Hannibal Lecter, a brilliant but imprisoned
+            cannibalistic psychiatrist, to gain insights into the mind of a
+            serial killer known as Buffalo Bill. As Clarice delves deeper into
+            the investigation, she must navigate the complex and manipulative
+            relationship with Lecter, who offers cryptic clues while probing
+            into her past and fears.<br />
+            The film explores themes of power, control, and the nature of evil,
+            as Clarice races against time to prevent further murders. With its
+            haunting atmosphere and unforgettable performances, particularly by
+            Anthony Hopkins as Lecter, The Silence of the Lambs masterfully
+            blends elements of horror and suspense, creating a tense narrative
+            that leaves a lasting impact on its audience. Directed by Jonathan
+            Demme, this iconic film remains a landmark in the thriller genre.
+          </p>
+          <figure class="blogVid">
+            <iframe
+              src="https://www.youtube.com/embed/6iB21hsprAQ"
+              title="THE SILENCE OF THE LAMBS (1991) | Official Trailer | MGM"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+            <figcaption>
+              The Silence of the Lambs Movie Trailer (Credit: Amazon MGM Studios
+              Youtube Channel)
+            </figcaption>
+          </figure>
+        </article>
+        <article class="blog" id="blog5">
+          <!-- Fifth blog -->
+          <h3>Blog 5</h3>
+          <h4 class="movie" id="movie5">Titanic</h4>
+          <p>
+            An unforgettable tale of love, sacrifice, and fate, set against the
+            backdrop of one of history's greatest maritime disasters.
+          </p>
+          <figure class="blogImg">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/1/18/Titanic_%281997_film%29_poster.png"
+              alt="Titanic Movie theatrical Release Poster"
+              height="auto"
+              width="70%"
+            />
+            <figcaption>
+              Theatrical Release poster (Credit: Wikipedia)
+            </figcaption>
+          </figure>
+          <p>
+            Titanic is a sweeping romantic drama that follows the ill-fated
+            maiden voyage of the RMS Titanic in 1912. The film centers on Jack
+            Dawson, a penniless artist, and Rose DeWitt Bukater, a young woman
+            from a wealthy family, who meet aboard the luxurious ship. Despite
+            their different social backgrounds, they form a deep and passionate
+            bond that challenges societal norms and expectations. As their love
+            blossoms, Rose grapples with her impending arranged marriage and the
+            constraints of her upper-class life.<br />
+            The film beautifully captures the opulence of the Titanic and the
+            emotional struggles of its characters, all while highlighting themes
+            of love, sacrifice, and resilience. As the voyage takes a disastrous
+            turn, Jack and Rose must navigate the chaos around them, fighting to
+            survive against overwhelming odds. Directed by James Cameron,
+            Titanic is a poignant tribute to love enduring in the face of
+            tragedy, leaving a lasting impact on audiences worldwide.
+          </p>
+          <figure class="blogVid">
+            <iframe
+              src="https://www.youtube.com/embed/CHekzSiZjrY"
+              title="Titanic | #TBT Trailer | 20th Century FOX"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+            <figcaption>
+              Titanic Movie Trailer (Credit: 20th Century Studios Youtube
+              Channel)
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </main>
+    <section id="about">
+      <!--  About section -->
+      <div id="aboutContent">
+        <h2>Who Am I?</h2>
+        <p>
+          Welcome to my little corner of the cinematic world! I’m Ayush, an
+          aspiring full stack developer who finds inspiration and joy in the art
+          of filmmaking. My passion for movies goes beyond mere entertainment; I
+          believe they have the power to provoke thought, evoke emotions, and
+          spark creativity. This blog is a reflection of my journey as a movie
+          enthusiast, showcasing my favorite films that I believe everyone
+          should experience.<br />
+          In this space, you can expect a curated selection of must-watch movies
+          spanning various genres, from poignant dramas to thrilling adventures.
+          I’ll share insightful reviews, personal reflections, and fun trivia
+          that enhance your viewing experience. My goal is to foster a community
+          of fellow film lovers who appreciate storytelling in its many forms
+          and encourage discussions about our shared love for cinema.<br />
+          Thank you for visiting my blog! I’m excited to share my movie
+          recommendations and engage with you on this cinematic journey. Whether
+          you're a casual viewer or a dedicated cinephile, I hope you find
+          something that resonates with you here. Let’s celebrate the magic of
+          movies together!
+        </p>
+      </div>
+    </section>
+    <section id="contact">
+      <!--  Contact section -->
+      <div id="contact-content">
+        <div id="contact-content-heading">
+          <div id="main">
+            CONTACT ME.
+            <div id="sub">Let's Talk Movies!</div>
+          </div>
+        </div>
+        <section>
+          <form action="#" method="post">
+            <label for="name">Name</label> <br />
+            <input
+              class="inputType1"
+              type="text"
+              id="name"
+              name="name"
+              required
+            /><br />
+
+            <label for="email">Email</label> <br />
+            <input
+              class="inputType1"
+              type="email"
+              id="email"
+              name="email"
+              required
+            /><br />
+
+            <label for="message">Message</label> <br />
+            <textarea
+              class="inputType1"
+              name="message"
+              id="message"
+              rows="10"
+            ></textarea
+            ><br />
+
+            <input
+              class="inputType1"
+              type="submit"
+              value="Send"
+              id="submit"
+            /><br /><br />
+          </form>
+        </section>
+      </div>
+      <div id="contact-image">
+        <img
+          src="./assets/img3.png"
+          alt="White Mail Icon"
+          height="450px"
+          width="100%"
+        />
+      </div>
+    </section>
+    <footer>
+      <!--  Footer section -->
+      <section>
+        <a
+          href="https://www.instagram.com/ayushprajapati562"
+          target="_blank"
+          class="icons fab fa-instagram"
+        ></a>
+        <a
+          href="https://www.facebook.com/ayushprajapati20"
+          target="_blank"
+          class="icons fab fa-facebook"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/ayushprajapati2000/"
+          target="_blank"
+          class="icons fab fa-linkedin"
+        ></a>
+        <a href="mailto:ap4701443@gmail.com" class="icons fas fa-envelope"></a>
+      </section>
+      <p>
+        <small>Copyright &copy; 2024 My Favorite Movies Blog</small>
+      </p>
+    </footer>
+  </body>
+</html>
